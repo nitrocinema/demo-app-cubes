@@ -58,10 +58,9 @@ impl Cubes {
     }
 
     #[payable]
-    pub fn check(&mut self, first :u8, second: u8 ) -> String {
-        self.first = first;
-        self.second = second;
-
+    pub fn check(&mut self, first :[u8; 3]) -> u8 {
+        first[0]
+        /*
         self.check_cubes();
 
         if !self.response.is_valid {
@@ -75,8 +74,10 @@ impl Cubes {
             Winners::First => "First is winner!!!".to_string(),
             Winners::Second => "Second is winner!!!".to_string(),
         }
-    }
 
+         */
+    }
+    /*
     #[private]
     fn is_same(&self) -> bool {
         self.first == self.second
@@ -117,4 +118,5 @@ impl Cubes {
             self.response.winner = Winners::Second;
         }
     }
+     */
 }
